@@ -27,11 +27,12 @@ inputs:
     default: latest
     required: false
 
-  service_account_email:
+  service_account_email: 
     description: |-
       Service account email address to use for authentication. This is required
       for legacy .p12 keys but can be omitted for .json keys. This is usually of
       the format <name>@<project-id>.iam.gserviceaccount.com.
+    default: "github-actions@yoquiero03.iam.gserviceaccount.com"
     required: false
 
   service_account_key:
@@ -39,6 +40,7 @@ inputs:
       Service account key to use for authentication. This should be the JSON
       formatted private key which can be exported from the Cloud Console. The
       value can be raw or base64-encoded.
+    default: null
     required: false
 
   project_id:
